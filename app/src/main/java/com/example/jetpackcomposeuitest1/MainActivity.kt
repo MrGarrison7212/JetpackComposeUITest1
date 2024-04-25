@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -99,9 +101,29 @@ fun profile() {
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(android.graphics.Color.parseColor("#ffffff"))
             ),
-            shape = RoundedCornerShape( 15)
+            shape = RoundedCornerShape(15)
         ) {
-
+            Column(
+                modifier = Modifier.fillMaxHeight(),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_1),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .padding(end = 5.dp)
+                        .clickable { }
+                )
+            }
+            Column(
+                modifier = Modifier
+                    .padding(start = 16.dp)
+                    .weight(1f),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.Start
+            ) {
+                Text(text = "My Reviews", color = Color.Black, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+            }
         }
     }
 }
