@@ -282,5 +282,26 @@ fun profile() {
                 )
             }
         }
+        Button(
+            onClick = { /*TODO*/ },
+            Modifier
+                .padding(start = 32.dp, end = 32.dp, top = 10.dp, bottom = 16.dp)
+                .fillMaxWidth()
+                .height(60.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(
+                    android.graphics.Color.parseColor(
+                        "#373ebf"
+                    )
+                )
+            ),
+            shape = RoundedCornerShape(50)
+        ) {
+            Text(text = "Back to Main Page",
+                color = Color.White,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
