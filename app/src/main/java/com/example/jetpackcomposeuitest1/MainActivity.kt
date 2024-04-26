@@ -206,5 +206,43 @@ fun profile() {
                 )
             }
         }
+        Button(
+            onClick = { /*TODO*/ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 32.dp, end = 32.dp, top = 10.dp, bottom = 10.dp)
+                .height(55.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(android.graphics.Color.parseColor("#ffffff"))
+            ),
+            shape = RoundedCornerShape(15)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxHeight(),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_4),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .padding(end = 5.dp)
+                        .clickable { }
+                )
+            }
+            Column(
+                modifier = Modifier
+                    .padding(start = 16.dp)
+                    .weight(1f),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.Start
+            ) {
+                Text(
+                    text = "Notification",
+                    color = Color.Black,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
     }
 }
